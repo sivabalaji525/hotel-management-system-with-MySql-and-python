@@ -8,7 +8,7 @@ import datetime
 global z
 mydb = mysql.connector.connect(
 user='root', 
-password='12345',
+password='12340',
  host='localhost',
  database='batch_57')
 mycursor=mydb.cursor()
