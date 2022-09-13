@@ -39,37 +39,37 @@ def registercust():
     mycursor.execute(sql,cust)
     mydb.commit()
 def roomtypeview():
- print("Do yoy want to see room type available : Enter 1 for yes :")
- ch=int(input("enter your choice:"))
- if ch==1:
-   sql="select * from roomtype"
-   mycursor.execute(sql)
-   rows=mycursor.fetchall()
-   for x in rows:
-      print(x)
+    print("Do yoy want to see room type available : Enter 1 for yes :")
+    ch=int(input("enter your choice:"))
+    if ch==1:
+      sql="select * from roomtype"
+      mycursor.execute(sql)
+      rows=mycursor.fetchall()
+      for x in rows:
+         print(x)
 def roomrent():
- print ("We have the following rooms for you:-")
- print ("1. type A---->rs 1000 PN\-")
- print ("2. type B---->rs 2000 PN\-")
- print ("3. type C---->rs 3000 PN\-")
- print ("4. type D---->rs 4000 PN\-")
- x=int(input("Enter Your Choice Please->"))
- n=int(input("For How Many Nights Did You Stay:"))
- if(x==1):
-   print ("you have opted room type A")
-   s=1000*n
- elif (x==2):
-   print ("you have opted room type B")
-   s=2000*n
- elif (x==3):
-    print ("you have opted room type C")
-    s=3000*n
- elif (x==4):
-   print ("you have opted room type D")
-   s=4000*n
- else:
-    print ("please choose a room")
-    print ("your room rent is =",s,"\n")
+   print ("We have the following rooms for you:-")
+   print ("1. type A---->rs 1000 PN\-")
+   print ("2. type B---->rs 2000 PN\-")
+   print ("3. type C---->rs 3000 PN\-")
+   print ("4. type D---->rs 4000 PN\-")
+   x=int(input("Enter Your Choice Please->"))
+   n=int(input("For How Many Nights Did You Stay:"))
+   if(x==1):
+     print ("you have opted room type A")
+     s=1000*n
+   elif (x==2):
+     print ("you have opted room type B")
+     s=2000*n
+   elif (x==3):
+      print ("you have opted room type C")
+      s=3000*n
+   elif (x==4):
+     print ("you have opted room type D")
+     s=4000*n
+   else:
+      print ("please choose a room")
+      print ("your room rent is =",s,"\n")
 def restaurentmenuview():
   print("Do yoy want to see mebu available : Enter 1 for yes :")
   ch=int(input("enter your choice:"))
@@ -159,50 +159,50 @@ def laundarybill():
     print("your laundary bill:",z,"\n")
     return z
 def lb():
- print(z)
+   print(z)
 def res():
- print(s)
+   print(s)
 def viewbill():
- a=input("enter customer name:")
- print("customer name :",a,"\n")
- print("laundarey bill:")
- print(lb)
- print("restaurent bill:")
- print(res)
+   a=input("enter customer name:")
+   print("customer name :",a,"\n")
+   print("laundarey bill:")
+   print(lb)
+   print("restaurent bill:")
+   print(res)
 
 def Menuset():
- print("enter 1: To enter customer data")
- print("enter 2 : To view roomtype")
- print("enter 3 : for calculating room bill")
- print("enter 4 : for viewing restaurent menu")
- print("enter 5 : for restaurent bill")
- print("enter 6 :for laundary bill")
- print("enter 7 : for complete bill")
- print("enter 8 : for exit:")
- try:
-     userinput=int(input("pleaseselect an above option:"))
- except ValueError:
-     exit("\n hi thats not a number")
+   print("enter 1: To enter customer data")
+   print("enter 2 : To view roomtype")
+   print("enter 3 : for calculating room bill")
+   print("enter 4 : for viewing restaurent menu")
+   print("enter 5 : for restaurent bill")
+   print("enter 6 :for laundary bill")
+   print("enter 7 : for complete bill")
+   print("enter 8 : for exit:")
+   try:
+       userinput=int(input("pleaseselect an above option:"))
+   except ValueError:
+       exit("\n hi thats not a number")
 
- userinput=int(input("enter your choice"))
- if(userinput==1):
-   registercust()
- elif(userinput==2):
-   roomtypeview()
- elif(userinput==3):
-   roomrent()
- elif(userinput==4):
-   restaurentmenuview()
- elif(userinput==5):
-   orderitem()
- elif(userinput==6):
-   laundarybill()
- elif(userinput==7):
-   viewbill()
- elif(userinput==8):
-   quit()
- else:
-   print("enter correct choice")
+   userinput=int(input("enter your choice"))
+   if(userinput==1):
+     registercust()
+   elif(userinput==2):
+     roomtypeview()
+   elif(userinput==3):
+     roomrent()
+   elif(userinput==4):
+     restaurentmenuview()
+   elif(userinput==5):
+     orderitem()
+   elif(userinput==6):
+     laundarybill()
+   elif(userinput==7):
+     viewbill()
+   elif(userinput==8):
+     quit()
+   else:
+     print("enter correct choice")
 Menuset()
 def runagain():
     runagn=input("\n want to run again y/n:")
